@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>imsp18 | Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -15,8 +16,10 @@
             <div class="logo">
                 <h1>imsp18.</h1>
             </div>
-            <div class="menu">
-                <ul>
+            <!-- Menu Container -->
+            <div class="menu-container">
+                <!-- Menu Items -->
+                <ul class="menu">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -24,14 +27,20 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            <!-- Menu Toggle Button -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <button>Resume</button>
         </div>
         <div class="hero-section">
             <div class="content">
                 <div class="left-content">
-                    <h1>Hello, I'm <span>Shivang</span></h1>
+                    <h1>Hello,I'm Shivang</h1>
                     <h2><span class="title"></span></h2>
-                    <button href="#contact">CONTACT ME</button>
+                    <button id="contact-me">CONTACT ME</button>
                 </div>
                 <div class="right-content">
                     <img src="images/image-1.svg" alt="Your Image">
@@ -40,7 +49,7 @@
         </div>
     </div>
     <!-- About Section -->
-    <div class="about-section">
+    <div class="about-section" id="about">
         <div class="about-header">
             <h2>ABOUT ME</h2>
             <hr class="horizontal-line">
@@ -63,7 +72,7 @@
         </div>
     </div>
     <!-- Skill Section -->
-    <div class="skill-section">
+    <div class="skill-section" id="skills">
         <div class="skill-header">
             <hr class="horizontal-line">
             <h2>SKILLS</h2>
@@ -83,7 +92,7 @@
         </div>
     </div>
     <!-- Project Section -->
-    <div class="project-section">
+    <div class="project-section" id="projects">
         <div class="project-header">
             <h2>PROJECTS</h2>
             <hr class="horizontal-line">
@@ -132,7 +141,7 @@
         </div>
     </div>
     <!-- Experience Section -->
-    <div class="experience-section">
+    <div class="experience-section" id="experience">
         <div class="experience-header">
             <hr class="horizontal-line">
             <h2>EXPERIENCE</h2>
@@ -214,7 +223,7 @@
         </div>
     </div>
     <!-- Contact Section -->
-    <div class="contact-section">
+    <div class="contact-section" id="contact">
         <div class="contact-header">
             <h2>CONTACT</h2>
             <hr class="horizontal-line">
@@ -226,7 +235,7 @@
                 industry trends, feel free to drop me a message using the form below. I'll do my best to get back to you
                 as soon as possible. Looking forward to hearing from you!
             </p>
-            <button>Contact Me</button>
+            <button id="contact-me">Contact</button>
         </div>
     </div>
     <!-- Footer Section -->
@@ -234,6 +243,9 @@
         <h2>© 2023 Shivang Parmar<br>
             <> with ❤️ By imsp18
         </h2>
+        <button id="scroll-top-button" class="scroll-top-btn" title="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
@@ -245,6 +257,78 @@
         })
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $(this).toggleClass('open');
+                $('.menu').slideToggle();
+            });
+        });
+    </script>
+    <script>
+        function toggleMenu() {
+            var menuContainer = document.getElementById('menu-container');
+            menuContainer.classList.toggle('open');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.querySelector('.navbar .menu-toggle');
+            var menuContainer = document.querySelector('.navbar .menu-container');
+
+            menuToggle.addEventListener('click', function () {
+                menuContainer.classList.toggle('open');
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Smooth scrolling on click
+            $('.menu a').on('click', function (e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top
+                }, 500);
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('contact-me').addEventListener('click', function () {
+            window.location.href = 'mailto:shivangparmar537@gmail.com';
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scrollTopButton = document.getElementById('scroll-top-button');
+
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 200) {
+                    scrollTopButton.classList.add('show');
+                    scrollTopButton.classList.remove('hide');
+                } else {
+                    scrollTopButton.classList.add('hide');
+                    scrollTopButton.classList.remove('show');
+                }
+            });
+
+            scrollTopButton.addEventListener('click', function () {
+                scrollToTop();
+            });
+
+            function scrollToTop() {
+                var scrollStep = -window.scrollY / 25;
+                var scrollInterval = setInterval(function () {
+                    if (window.scrollY !== 0) {
+                        window.scrollBy(0, scrollStep);
+                    } else {
+                        clearInterval(scrollInterval);
+                    }
+                }, 15);
+            }
+        });
+
+    </script>
 </body>
 
 </html>
