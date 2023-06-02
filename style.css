@@ -266,7 +266,6 @@ button {
 
 .about-text {
     flex: 1;
-    margin-right: 20px;
     color: #fff;
     line-height: 27px;
     font-size: 18px;
@@ -327,7 +326,6 @@ button {
 
 .skill-text {
     flex: 1;
-    margin-left: 20px;
     color: #fff;
     line-height: 27px;
     font-size: 18px;
@@ -827,7 +825,6 @@ input[type="email"]::placeholder {
 
     /* about section */
     .about-text {
-        color: #fff;
         font-size: 12px;
         font-weight: 500;
     }
@@ -844,6 +841,7 @@ input[type="email"]::placeholder {
     .skill-text {
         color: #fff;
         font-size: 12px;
+        text-align: justify;
         font-weight: 500;
     }
 
@@ -889,10 +887,14 @@ input[type="email"]::placeholder {
     .project-content .project-2 {
         flex-direction: column-reverse;
     }
-
+    .project-image{
+        width: 100%;
+    }
+    .project-image img:hover {
+        transform:none;
+    }
     .project-image img {
         height: auto;
-        width: 100%;
         border-radius: 5px;
     }
 
