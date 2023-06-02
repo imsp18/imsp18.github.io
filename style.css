@@ -364,7 +364,9 @@ button {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.project-1{
+    margin-bottom: 80px;
+}
 .project-1,
 .project-2 {
     display: flex;
