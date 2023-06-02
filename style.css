@@ -37,7 +37,8 @@ body {
     font-weight: 400;
     margin-right: 217px;
 }
-.navbar .menu{
+
+.navbar .menu {
     margin-right: 117px;
 }
 
@@ -157,6 +158,76 @@ button {
 .hero-section .content .right-content img {
     max-width: 100%;
     height: auto;
+}
+
+/* social media sticky bar  */
+.social-bar {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.social-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #00F0AC;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #fff;
+    transition: 1s;
+}
+
+.vertical-line-1 {
+    position: fixed;
+    left: 38px;
+    top: 58%;
+    margin-left: ;
+    width: 2px;
+    height: 280px;
+    background-color: #00F0AC;
+    margin: 10px auto;
+}
+
+/* Email Bar */
+.email-bar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+    writing-mode: vertical-rl;
+}
+
+.email-link {
+    display: block;
+    padding: 10px;
+    color: #00F0AC;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #fff;
+}
+
+.vertical-line-2 {
+    position: fixed;
+    right: 43px;
+    top: 69%;
+    width: 2px;
+    height: 200px;
+    background-color: #00F0AC;
+    margin: 10px auto;
 }
 
 /* About Section */
@@ -537,11 +608,32 @@ button {
     color: #fff;
     padding: 40px 0;
     text-align: center;
+    position: relative;
 }
 
 .footer-section h2 {
     font-size: 18px;
     line-height: 27px;
+}
+
+.scroll-top-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    background-color: #00F0AC;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    height: 45px;
+    width: 45px;
+}
+
+.scroll-top-btn:hover {
+    opacity: 1;
 }
 
 
@@ -557,11 +649,13 @@ button {
     .navbar {
         display: flex;
         justify-content: space-between;
-        align-items: center ;
+        align-items: center;
     }
-    .navbar .logo h1{
+
+    .navbar .logo h1 {
         font-size: 16px;
     }
+
     .navbar .menu {
         display: none;
     }
@@ -656,7 +750,7 @@ button {
     }
 
     .hero-section .left-content {
-        margin-top: 220px ;
+        margin-top: 220px;
     }
 
 
@@ -675,6 +769,23 @@ button {
     }
 
     .hero-section .content .right-content img {
+        display: none;
+    }
+
+    /* social media bar */
+    .social-bar {
+        display: none;
+    }
+
+    .vertical-line-1 {
+        display: none;
+    }
+
+    .email-bar {
+        display: none;
+    }
+
+    .vertical-line-2 {
         display: none;
     }
 
@@ -825,6 +936,12 @@ button {
     }
 
     .footer-section h2 {
-        font-size: 9px;
+        font-size: 12px;
+    }
+    .scroll-top-btn {
+        height: 35px;
+        width: 35px;
+        bottom: 45px;
+        padding: 5px;
     }
 }
