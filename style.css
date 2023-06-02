@@ -29,6 +29,8 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 18px;
     z-index: 999;
+    left: 54%;
+    transform: translateX(-54%);
 }
 
 .navbar .logo h1 {
@@ -586,21 +588,68 @@ button {
     color: #00F3A4;
 }
 
-.contact-text button {
-    background-color: transparent;
-    border: 2px solid #00F0AC;
-    color: #fff;
-    padding: 10px 50px;
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #00F0AC;
     border-radius: 35px;
-    font-size: 25px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-.contact-text button:hover {
-    background-color: #00F0AC;
+.contact-form h2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 90px;
     color: #000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border-width: 0 0 2px 0;
+    border-color: #000000;
+    color: #000;
+    font-weight: 500;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+
+input[type="email"]::placeholder {
+    color: #000;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: #000;
+    font-weight: 500;
+}
+
+
+.contact-form button {
+    display: block;
+    width: 50%;
+    padding: 10px 10px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 35px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 /* Footer Section */
@@ -626,16 +675,10 @@ button {
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
     height: 45px;
     width: 45px;
 }
-
-.scroll-top-btn:hover {
-    opacity: 1;
-}
-
 
 @media screen and (max-width: 480px) {
 
@@ -646,12 +689,6 @@ button {
     }
 
     /* navbar */
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
     .navbar .logo h1 {
         font-size: 16px;
     }
@@ -667,6 +704,7 @@ button {
     .navbar .menu-toggle {
         display: block;
         cursor: pointer;
+        margin-right: 20px;
     }
 
     .navbar .menu-toggle .bar {
@@ -690,20 +728,18 @@ button {
     }
 
     /* menu-container */
-    .navbar .menu-container {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
 
     .navbar .menu-container.open {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navbar .menu-container {
         display: none;
         position: absolute;
+        flex-direction: column;
+        align-items: center;
         top: 100%;
         left: 0;
         width: 100%;
@@ -935,9 +971,38 @@ button {
         border-radius: 30px;
     }
 
+    .contact-form {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .contact-form h2 {
+        font-size: 18px;
+        line-height: 60px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .contact-form button {
+        width: 50%;
+        font-size: 12px;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+    }
+
     .footer-section h2 {
         font-size: 12px;
     }
+
     .scroll-top-btn {
         height: 35px;
         width: 35px;
