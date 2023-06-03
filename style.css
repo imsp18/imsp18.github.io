@@ -330,14 +330,7 @@ body {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-}
-
-.skill-image {
-    flex: 1;
-}
-
-.skill-image img {
-    object-fit: contain;
+    color: var(--text-color);
 }
 
 .skill-text {
@@ -346,6 +339,33 @@ body {
     line-height: 27px;
     font-size: 18px;
     font-weight: 500;
+}
+
+.skill-bar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-name {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.skill-progress {
+    width: 50%;
+    height: 10px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #00F0AC;
+    border-radius: 5px;
+
 }
 
 /* Project Section */
@@ -814,7 +834,6 @@ input[type="email"]::placeholder {
 
     .hero-section .left-content {
         margin-top: 220px;
-        align-items: center;
     }
 
 
@@ -872,14 +891,31 @@ input[type="email"]::placeholder {
         font-size: 12px;
         text-align: justify;
         font-weight: 500;
+        margin-bottom: 30px;
     }
 
     .skill-content {
-        display: inline;
+        display: flex;
     }
 
-    .skill-image img {
-        display: none;
+    /* skill bar */
+    .skill-content {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .skill-text {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .skill-bar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skill-progress {
+        width: 100%;
     }
 
     /* project section */
