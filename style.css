@@ -840,15 +840,18 @@ input[type="email"]::placeholder {
     .hero-section .content h1 {
         font-size: 40px;
         line-height: 45px;
+        margin-left: 10px;
     }
 
     .hero-section .content h2 {
         font-size: 15px;
+        margin-left: 10px;
     }
 
     .hero-section .content button {
         font-size: 12px;
-        padding: 8px 40px;
+        padding: 10px 58px;
+        align-items: center;
     }
 
     .hero-section .content .right-content img {
