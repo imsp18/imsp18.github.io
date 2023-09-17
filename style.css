@@ -69,6 +69,7 @@ body::-webkit-scrollbar-thumb
     font-size: 18px;
     font-weight: 400;
     margin-right: 217px;
+    margin-left: 10px;
 }
 
 .navbar .menu {
@@ -182,6 +183,7 @@ body::-webkit-scrollbar-thumb
 .hero-section .content button:hover {
     background-color: #00F0AC;
     color: var(--span-text-color);
+    cursor: pointer;
 }
 
 .hero-section .content .right-content {
