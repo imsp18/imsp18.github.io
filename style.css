@@ -964,6 +964,7 @@ input[type="email"]::placeholder {
 
     .project-content {
         display: flex;
+
     }
 
     .project-content .project-1 {
@@ -988,6 +989,7 @@ input[type="email"]::placeholder {
     .project-1 .project-text {
         width: 100%;
         text-align: left;
+        display: flex;
     }
 
     .project-2 .project-text {
