@@ -842,7 +842,10 @@ input[type="email"]::placeholder {
 
     /* hero section */
     .hero-section {
-        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
         margin-bottom: 20px;
     }
 
@@ -851,6 +854,9 @@ input[type="email"]::placeholder {
     }
 
     .hero-section .left-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin-top: 220px;
     }
 
@@ -868,7 +874,7 @@ input[type="email"]::placeholder {
 
     .hero-section .content button {
         font-size: 12px;
-        padding: 10px 58px;
+        padding: 10px 40px;
         align-items: center;
     }
 
