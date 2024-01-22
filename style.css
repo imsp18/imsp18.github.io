@@ -845,8 +845,8 @@ input[type="email"]::placeholder {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 30px;
-        margin-bottom: 20px;
+        align-items: center;
+        min-height: 100vh;
     }
 
     .hero-section .content {
@@ -857,19 +857,16 @@ input[type="email"]::placeholder {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 220px;
     }
 
 
     .hero-section .content h1 {
         font-size: 40px;
         line-height: 45px;
-        margin-left: 10px;
     }
 
     .hero-section .content h2 {
-        font-size: 15px;
-        margin-left: 10px;
+        font-size: 12px;
     }
 
     .hero-section .content button {
